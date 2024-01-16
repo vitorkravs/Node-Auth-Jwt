@@ -1,7 +1,17 @@
 require("dotenv").config();
-const express = require("express");
-const mongoose = require("mongoose");
-const mcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+import express from "express";
+import mongoose from "mongoose";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+
+import "./config/DbConfig";
 
 const app = express();
+const PORT = 3333;
+
+//Config JSON response
+app.use(express.json());
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
