@@ -1,6 +1,5 @@
 require("dotenv").config();
 import express from "express";
-import jwt from "jsonwebtoken";
 
 import "./config/DbConfig";
 import routes from "./routes";
